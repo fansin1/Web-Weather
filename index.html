@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<html>
+<head>
+    <title>Погода</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__weather-text">Погода здесь</h1>
+        <button class="header__update-geo">
+            <span class="header__update-geo__span">Обновить геолокацию</span>
+            <i class="fa fa-refresh header__update-geo__icon"></i>
+        </button>
+    </header>
+    <main class="weather">
+        <section class="weather__current">
+            <div class="weather__current__item weather__main">
+                <h2 class="weather__current__main__city">Saint Petersburg</h1>
+                <div class="weather__current__main__data">
+                    <img class="weather__current__main__data__img" src="https://www.pngfind.com/pngs/m/273-2733257_icon-weather-portal-comments-weather-icons-png-white.png"/>
+                    <p class="weather__current__main__data__cel">8C</p>
+                </div>
+            </div>
+            <ul class="weather__current__item weather__list"> 
+                <li class="weather__list__item">
+                    <p class="weather__list__item__title">Ветер</p>
+                    <p class="weather__list__item__value">Moderate breeze, 6.0 m/s, North</p>
+                </li>
+                <li class="weather__list__item">
+                    <p class="weather__list__item__title">Облачность</p>
+                    <p class="weather__list__item__value">Broken clouds</p>
+                </li>
+                <li class="weather__list__item">
+                    <p class="weather__list__item__title">Давление</p>
+                    <p class="weather__list__item__value">1013 hpa</p>
+                </li>
+                <li class="weather__list__item">
+                    <p class="weather__list__item__title">Влажность</p>
+                    <p class="weather__list__item__value">53%</p>
+                </li>
+                <li class="weather__list__item">
+                    <p class="weather__list__item__title">Координаты</p>
+                    <p class="weather__list__item__value">[59.88, 30.42]</p>
+                </li>
+            </ul>
+        </section>
+        <section class="favorites">
+            <h2 class="favorites__title">Избранное</h2>
+            <form class="favorites__form">
+                <input class="favorites__form__input"></input>
+                <button class="favorites__form__button"><i class="fa fa-plus"></i></button>
+            </form>
+        </section>
+        <ul class="weather__favorites">
+            <li>
+                <ul class="weather__favorites__list">
+                    <li class="weather__favorites__list__title">
+                        <p class="weather__favorites__list__title__city">Saint Petersburg</p>
+                        <p class="weather__favorites__list__title__temp">5C</p>
+                        <img class="weather__favorites__list__title__img" src="https://www.pngfind.com/pngs/m/273-2733257_icon-weather-portal-comments-weather-icons-png-white.png"/>
+                        <button class="weather__favorites__list__title__button"><i class="fa fa-close"></i></button>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Ветер</p>
+                        <p class="weather__favorites__list__item__value">Moderate breeze, 6.0 m/s, North</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Облачность</p>
+                        <p class="weather__favorites__list__item__value">Broken clouds</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Давление</p>
+                        <p class="weather__favorites__list__item__value">1013 hpa</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Влажность</p>
+                        <p class="weather__favorites__list__item__value">53%</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Координаты</p>
+                        <p class="weather__favorites__list__item__value">[59.88, 30.42]</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="weather__favorites__list">
+                    <li class="weather__favorites__list__title">
+                        <p class="weather__favorites__list__title__city">Moscow</p>
+                        <p class="weather__favorites__list__title__temp">5C</p>
+                        <img class="weather__favorites__list__title__img" src="https://www.pngfind.com/pngs/m/273-2733257_icon-weather-portal-comments-weather-icons-png-white.png"/>
+                        <button class="weather__favorites__list__title__button"><i class="fa fa-close"></i></button>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Ветер</p>
+                        <p class="weather__favorites__list__item__value">Moderate breeze, 6.0 m/s, North</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Облачность</p>
+                        <p class="weather__favorites__list__item__value">Broken clouds</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Давление</p>
+                        <p class="weather__favorites__list__item__value">1013 hpa</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Влажность</p>
+                        <p class="weather__favorites__list__item__value">53%</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Координаты</p>
+                        <p class="weather__favorites__list__item__value">[59.88, 30.42]</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="weather__favorites__list">
+                    <li class="weather__favorites__list__title">
+                        <p class="weather__favorites__list__title__city">Moscow</p>
+                        <p class="weather__favorites__list__title__temp">5C</p>
+                        <img class="weather__favorites__list__title__img" src="https://www.pngfind.com/pngs/m/273-2733257_icon-weather-portal-comments-weather-icons-png-white.png"/>
+                        <button class="weather__favorites__list__title__button"><i class="fa fa-close"></i></button>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Ветер</p>
+                        <p class="weather__favorites__list__item__value">Moderate breeze, 6.0 m/s, North</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Облачность</p>
+                        <p class="weather__favorites__list__item__value">Broken clouds</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Давление</p>
+                        <p class="weather__favorites__list__item__value">1013 hpa</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Влажность</p>
+                        <p class="weather__favorites__list__item__value">53%</p>
+                    </li>
+                    <li class="weather__favorites__list__item">
+                        <p class="weather__favorites__list__item__title">Координаты</p>
+                        <p class="weather__favorites__list__item__value">[59.88, 30.42]</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+main,
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  padding: 1em 2em 1em 2em;
+}
+.header__update-geo {
+  background-color: #BEC8CD;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.header__update-geo__icon {
+  display: none !important;
+}
+
+.weather__current {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  justify-content: space-between;
+}
+.weather__current__item {
+  display: flex;
+  padding: 1em 2em 1em 2em;
+  flex-direction: column;
+  justify-items: center;
+  margin-bottom: 2em;
+}
+.weather__current__item__title {
+  display: flex;
+  align-items: center;
+}
+.weather__current__main {
+  align-items: flex-start;
+}
+.weather__current__main__data {
+  display: flex;
+  align-items: center;
+}
+.weather__current__main__data__img {
+  align-self: flex-start;
+  max-width: 8em;
+  max-height: 8em;
+  margin-right: 2em;
+}
+.weather__current__main__data__cel {
+  font-size: 5em;
+}
+.weather__current__main__city {
+  margin-bottom: 1em;
+}
+.weather__list__item {
+  display: flex;
+  background-color: #BEC8CD;
+  padding: 7px;
+  justify-content: space-between;
+  margin: 0.25em 0 0.25em 0;
+}
+.weather__favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  justify-content: space-between;
+}
+.weather__favorites__list {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em 1em 2em;
+  justify-items: center;
+}
+.weather__favorites__list__title {
+  display: flex;
+  align-items: center;
+}
+.weather__favorites__list__title__city {
+  margin-right: 0.5em;
+  font-size: 1.3em;
+}
+.weather__favorites__list__title__temp {
+  margin-right: 0.5em;
+  font-size: 1.3em;
+}
+.weather__favorites__list__title__img {
+  max-height: 2em;
+  margin-right: auto;
+}
+.weather__favorites__list__title__button {
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+.weather__favorites__list__item {
+  display: flex;
+  background-color: #BEC8CD;
+  padding: 7px;
+  justify-content: space-between;
+  margin: 0.25em 0 0.25em;
+}
+
+.favorites {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em 2em 1em 2em;
+}
+.favorites__form {
+  display: flex;
+  align-items: center;
+}
+.favorites__form__input {
+  background-color: #BEC8CD;
+  padding: 0.8em;
+  margin-right: 1em;
+  border-radius: 5px;
+  max-width: 400px;
+}
+.favorites__form__button {
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .header {
+    max-width: 240px;
+    padding: 0.3em 0.6em 0.3em 0.6em;
+  }
+  .header__update-geo__span {
+    display: none;
+  }
+  .header__update-geo__icon {
+    display: block !important;
+  }
+
+  .favorites {
+    padding: 0.3em 0.6em 0.3em 0.6em;
+  }
+
+  .weather__current {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .weather__current__item {
+    padding: 0.3em 0.6em 0.3em 0.6em;
+    margin-bottom: 0;
+  }
+  .weather__current__main__data__img {
+    max-width: 4em;
+    max-height: 4em;
+    margin-right: 0.8em;
+  }
+  .weather__current__main__data__cel {
+    font-size: 3em;
+  }
+  .weather__current__main__city {
+    margin-bottom: 1em;
+  }
+  .weather__favorites {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .weather__favorites__list {
+    padding: 0.3em 0.6em 0.3em 0.6em;
+  }
+  .weather__favorites__list__title__city {
+    font-size: 1.1em;
+  }
+  .weather__favorites__list__title__temp {
+    font-size: 1.1em;
+  }
+  .weather__favorites__list__title__img {
+    max-height: 1em;
+    margin-right: auto;
+  }
+}
