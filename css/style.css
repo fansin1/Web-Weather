@@ -147,8 +147,12 @@ button {
   align-items: center;
 }
 .favorites-list__city {
+  min-width: 0;
   margin-right: 0.5em;
   font-size: 1.3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .favorites-list__temp {
   margin-right: 0.5em;
@@ -160,6 +164,7 @@ button {
 }
 .favorites-list__button {
   font-size: 1em;
+  min-width: 1.5em;
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
