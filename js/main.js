@@ -69,6 +69,7 @@ function onCityLoaded(fromStorage, parent, element, weather) {
             addToLocalFavorites(weather.id)
         }
     } else {
+        alert("This city already in favorite")
         parent.removeChild(element)
     }
 }
@@ -92,10 +93,10 @@ function fillCityElement(parent, element, weather) {
     element.querySelector('.favorites-list__city').textContent = weather.name
     element.querySelector('.favorites-list__img').src = `http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`
     element.querySelector('.favorites-list__temp').textContent = `${Math.round((weather.main.temp - 273.15) * 100) / 100}°C`
-    element.querySelector('.favorites-list__button').onclick = function () {
+    element.querySelector('.favorites-list__button').addEventListener("click", () => {
         parent.removeChild(element)
         removeFromLocalFavorites(weather.id)
-    }
+    })
     element.querySelector('#favorites-wind').textContent = `${weather.wind.speed} m/s, ${windDegToText(weather.wind.deg)}`
     element.querySelector('#favorites-cloudiness').textContent = `${weather.clouds.all}%`
     element.querySelector('#favorites-pressure').textContent = `${weather.main.pressure} hpa`
@@ -171,15 +172,17 @@ window.onload = function () {
     document.getElementsByClassName("favorites__form")[0].addEventListener('submit', event => {
         event.preventDefault()
     })
-    document.getElementsByClassName("favorites__button")[0].onclick = function () {
+    document.getElementsByClassName("favorites__button")[0].addEventListener("click", () => {
         let input = document.getElementsByClassName("favorites__input")[0]
         let cityName = input.value
+        let isBlank = cityName.trim() === ""
+        if (isBlank) return
         input.value = ""
         addNewCityByName(cityName)
-    }
-    document.getElementsByClassName("header__update-geo")[0].onclick = function () {
+    })
+    document.getElementsByClassName("header__update-geo")[0].addEventListener("click", () => {
         loadCurrentCity()
-    }
+    })
     let favorites = getLocalFavorites()
     favorites.forEach(item => {
         addNewCityById(item)
